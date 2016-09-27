@@ -1,0 +1,86 @@
+<p id="notice"><%= notice %></p>
+<div class="cover-img-container">
+  <div class="cover-img" style="background-image: url('<%= @room.images.first.url %>')">
+</div>
+</div>
+
+<div class="row summary ">
+  <div class="col-xs-12 col-sm-10 col-md-6 col-md-offset-1">
+    <div class="col-md-2 text-center">
+        <img class="img-responsive img-circle" alt="" class="host-profile-image" height="115" width="115" data-pin-nopin="true" src="https://a2.muscache.com/im/pictures/fd56ccc9-3c30-4555-9fb7-4e242c7f691d.jpg?aki_policy=profile_x_medium" title="Ken" data-reactid=".19w20i4da0w.0.0.0.0.0.0">
+      <p></p>
+      <%= User.find_by(id: @room.user_id).firstname %>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <h4>
+          The closet behind CoderFactory's classroom.
+        </h4>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          entire home
+        </div>
+        <div class="col-md-3">
+          Guests
+        </div>
+        <div class="col-md-3">
+          Bedrooms
+        </div>
+        <div class="col-md-3">
+          Beds
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>
+  <strong>Description:</strong>
+  <%= @room.description %>
+</p>
+
+<p>
+  <strong>Accommodates:</strong>
+  <%= @room.accommodates %>
+</p>
+
+<p>
+  <strong>Bathroom:</strong>
+  <%= @room.bathroom %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @room.price %>
+</p>
+
+<p>
+  <strong>Kitchen:</strong>
+  <%= @room.kitchen %>
+</p>
+
+
+
+<p>
+  <strong>Internet:</strong>
+  <%= @room.internet %>
+</p>
+
+<p>
+  <strong>Pets:</strong>
+  <%= @room.pets %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @room.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @room.name %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
